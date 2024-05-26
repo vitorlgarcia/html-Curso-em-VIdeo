@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brincando com pseudo-classes</title>
+
+    <style>
+        /*   SELETORES PERSONALIZADOS
+
+             #  = id
+             .  = classe
+             :  = pseudo-classe
+             :: = pseudo elementos
+             >  = children
+
+        */
+
+
+        div:hover {
+            background-color: blue;
+
+        }
+
+        div > p {
+            display: none;
+        }
+
+        div:hover > p {
+            display: block;
+            background-color: red;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .d {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: aliceblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: black;
+
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        .especial::before {
+           content: '→';
+        }
+
+        a::after {
+           content: '←';
+        }
+
+    </style>
+</head>
+<body>
+    <div class="d">1</div>
+    <div class="d">2</div>
+    <div class="d">3</div>
+    <div id="escondido">
+        passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+        
+    </div>
+    <p>fim do exemplo</p>
+    <p></p>
+    <H1>Personalizando links</H1>
+    <p>
+        <ul>
+            <li> <a href="https://github.com/" target="_blank">Página do GitHub </a> </li>
+            <li> <a href="https://www.youtube.com/" target="_blank">Canal do Youtube</a> </li>
+            <li> <a href="https://www.cursoemvideo.com/" target="_blank" class="especial">Site do Curso em Vídeo</a> </li>
+        </ul>
+
+    </p>
+</body>
+</html>
