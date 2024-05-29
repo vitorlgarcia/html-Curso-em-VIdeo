@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>centralizacao vertical de caixas</title>
+
+    <style>
+        #container {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%; /* deixa o tamanho da imagem de fundo em 100% da altura do container e 100% do comprimento do container */
+
+            position: relative; /* ajusta a posição do bloco em relação a tela */
+            height: 93vh;   /* deixa a altura do container cobrindo 93% do body */
+            padding: 10px;
+            background-color: purple;
+        }
+
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+            position: absolute; /* ajusta a posição em relação ao bloco no qual o bloco atual está inserido */
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%; /* esse comando só é possível graças a posição ser absoluta. Aqui o bloco está sendo posicionado para 50% a esquerda do container e 50% pra baixo do container */
+            top: 50%;
+
+            transform: translate(-50%, -50%); /* comando usado para fazer movimentos do bloco "Conteúdo" semelhante ao "left" e "top". O sinal de negativo faz o bloco se mover para cima e para a esquerda. */
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+
+        </article>
+
+
+    </section>
+
+    
+</body>
+</html>

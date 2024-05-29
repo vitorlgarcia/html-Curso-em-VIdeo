@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando fundo da imagem</title>
+
+    <style>
+        body {
+            
+            background-color: black;
+            background-image: url(imagens/wallpaper002.jpg);
+            background-position: center center;    /* ajusta a posição da imagem dentro do body */
+            background-repeat: no-repeat;     /* usado para repetir ou não uma imagem de fundo */
+            background-size:cover; /* ajusta o tamanho da imagem de fundo na body. Pode "ajustar" (inclusive dando zoom) a imagem ao tamanho da tela (cover), pode programar para que a imagem apareça inteira na tela, dentre outros (contain) */
+            background-attachment:fixed; 
+
+            /* shorthand do comando background:
+
+            color > image > position > repeat > [size] > attachment
+
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed
+
+            (o elemento size ainda não está funcionando na shorthand como a w3c indica)
+
+            */
+
+
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 500px;
+            margin: auto;
+            border: 1px solid darkblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <main>
+        <h1>Teste de imagem de fundo</h1>
+    
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque optio voluptate eveniet non? Blanditiis quae numquam, quidem eaque commodi nihil, velit quia molestiae excepturi quibusdam tempore dignissimos? Vero, sed beatae?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam illum magni dicta, natus inventore at odit hic tenetur assumenda libero nihil laudantium, quae architecto praesentium consequuntur dolorum sit quaerat soluta.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias facere fugiat iure placeat incidunt! Porro sint nostrum quas deserunt facilis minus voluptatum adipisci modi, soluta recusandae, tempore impedit omnis dolorem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur alias vel et labore velit dicta, eveniet, odio cum delectus minima eligendi ad quis ratione magni quae accusantium perspiciatis corporis?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi molestias sit quis modi maiores incidunt est aut commodi unde ut, fugit officia adipisci nam provident enim iste voluptatem cumque mollitia!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, sed aperiam reiciendis officia totam distinctio. Esse facere minus ea at quisquam placeat deserunt. Vitae, vel non modi explicabo excepturi quia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, voluptatum similique! Sunt nobis deserunt quasi et reiciendis quisquam libero accusantium asperiores corporis magnam nihil repellendus repudiandae, omnis itaque, velit dolore.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid consequatur voluptate ducimus mollitia? Aut ea voluptate sequi ullam. Sit rem repellendus officia molestiae deleniti eos voluptate nihil ducimus provident omnis?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis ratione aperiam vero necessitatibus, eos consequatur, iusto quod accusantium nostrum dignissimos modi possimus minima adipisci. Sit enim pariatur corporis exercitationem voluptatem.</p>
+
+
+    </main>
+    
+</body>
+</html>
