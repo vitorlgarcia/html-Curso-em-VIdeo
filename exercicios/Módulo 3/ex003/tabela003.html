@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem de Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de Tabelas</h1>
+
+    <!--TRABALHANDO COM COLSPAN E ROWSPAN
+    
+        Para realizar os dois comandos satisfatoriamente, é recomendado
+        fazer uma matriz (tabela) cheia e ir tirando os elementos para que a 
+        célula adjacente a sua escolha seja mesclada.    
+    -->
+
+    <Table>
+        <tbody>
+            <tr>
+                <td>Z</td>
+                <td colspan="2">A</td> <!--Comando que faz uma célula X ocupar 2 COLUNAS ou mais-->
+                
+            </tr>
+            <tr>
+                <td rowspan="3">C</td> <!--Comando que faz uma célula X ocupar 2 LINHAS ou mais-->
+                <td>D</td>
+                <td rowspan="2">E</td>
+            </tr>
+            <tr>
+                
+                <td>G</td>
+                
+            </tr>
+            <tr>
+                
+                <td colspan="2">J</td>
+                
+            </tr>
+
+        </tbody>
+
+    </Table>
+    
+</body>
+</html>
