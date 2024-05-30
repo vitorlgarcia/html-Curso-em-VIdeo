@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas de filmes favoritos</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: middle;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        caption {
+            font-weight: bolder;
+        }
+
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <!--SCOPE é usado para mostrar a algum buscador toda a estrutura de uma tabela no site
+    o ROWGROUP e o COLGROUP possuem a função de mostrar que tal Título do atributo
+    nomeia um grupo de colunas ou um grupo de linhas.
+
+    nessa tabela abaixo,a <th> "Mulheres" e "Homens" nomeiam um grupo de linhas, por exemplo.
+    
+    Já a <th> "Filmes" nomeiam um grupo de colunas.
+
+    -->
+
+
+    <h1>Exercício de Tabelas</h1>
+    <table>
+        <caption>Filmes Favoritos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+
+            <tr>
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+            </tr>
+
+            <tr>
+                <td>Cláudia Melo</td>
+                <td>Oblivion</td>
+                <td>Matrix</td>
+                <td>Big Hero</td>
+
+            </tr>
+
+            <tr>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td>Bruno mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+            </tr>
+
+            <tr>
+                <td>Daniel Lourenço</td>
+                <td>Wall-E</td>
+                <td>Oldboy</td>
+                <td>Dangal</td>
+            </tr>
+
+            <tr>
+                <td>Fabiano Mota</td>
+                <td>Star Wars V</td>
+                <td>Taxi Driver</td>
+                <td>Toy Story</td>
+            </tr>
+
+        </tbody>
+
+
+
+    </table>
+    
+</body>
+</html>
