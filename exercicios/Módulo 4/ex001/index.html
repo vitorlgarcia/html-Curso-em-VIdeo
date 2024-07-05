@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de Iframe</title>
+
+    <style>
+        p {
+            padding: 20px
+        }
+
+        iframe {
+            display: block;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+    <p>Acessando o site do
+    
+
+    <!-- TAMANHO PADRAO DE UM IFRAME: 300x150  --> 
+    <!-- POR PADRAO O IFRAME É UM DISPLAY INLINE--> 
+
+    <iframe src="https://www.cursoemvideo.com/" frameborder="0" scolling="no"> <!--o scolling é um parâmetro para não deixar uma página dentro de um iframe rolar-->
+        <a href="http://www.cursoemvideo.com/" target="_blank" rel="noopener noreferrer">cursoemvideo</a>
+
+    </iframe>
+
+    para aprender a programar.</p>
+
+    <p>
+        O site da 
+
+        <iframe src="https://globo.com" frameborder="0" height="500" width="500">
+            <a href="http://globo.com" target="_blank" rel="noopener noreferrer">Globo.com</a>
+
+
+        </iframe>
+
+        funciona com Iframe
+    </p>
+
+    <h2>Páginas locais apresentadas dentro de um iframe</h2>
+
+    <p>É possível apresentar uma página hospedada localmente utilizando iframes. Foi visto no curso que nem todo site permite ser apresentado pelo iframe. Já as páginas locais (feitas por nós mesmo) podem ser apresentadas normalmente utilizando o iframe, conforme o exemplo abaixo. Nele é apresentado a tabela feita no Módulo 3: </p>
+
+    <iframe src="../../Módulo 3/ex003/desafio_tabelas2.html" frameborder="0" height="500" width="500">
+
+        <p>tabela do desafio 2 / módulo 3</p>
+
+
+
+    </iframe>
+    
+</body>
+</html>
