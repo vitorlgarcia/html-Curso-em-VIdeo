@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Sandbox</title>
+
+    <style>
+        iframe {
+            display: block;
+            margin: 5px 0px 20px 0px;  /* lembrando que é sempre up, right, bottom, left */
+            border: solid 1px black;
+            height: 400px;
+            width: 95vh;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Uso do Sandbox</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis corrupti dolorum maxime amet mollitia, placeat, dolorem rerum vitae est tenetur dolores corporis exercitationem deserunt praesentium, animi unde. Unde, totam dicta.</p>
+
+    <iframe src="exercicio_sandbox/formulario.html" referrerpolicy="no-referrer" sandbox="sandbox">
+    <!-- o comando referrerpolicy é uma das seguranças do iframe, pois impede que o dono do site no qual o link foi apontado não pegue dados de quem está usando seu site-->
+
+    <!-- Outro comando muito importante é o SANDBOX, pois ele impede que qualquer informação seja dada em formulários ou scripts, por exemplo. Nesse caso o sandbox está proibindo o usuário de colocar seu nome no formulário dentro do iframe-->
+        <p>Seu dispositivo não é compatível com iframe</p>
+
+    </iframe>
+
+
+    <iframe src="exercicio_sandbox/script.html" sandbox="allow-scripts">
+    <!-- Nesse exemplo o SANDBOX está permitindo apenas o uso de scripts Javascript dentro desse iframe. Então, ao clicar, o javascript vai continuar funcionando. -->
+
+        <p>Seu dispositivo não é compatível com iframe</p>
+
+    </iframe>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam voluptatum, similique dolorum in totam quae consequuntur incidunt? Repellat iste sint facilis molestiae veritatis animi, voluptatibus nostrum commodi deserunt eaque iusto!</p>
+
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Iframes</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tela {
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Nesse exercício é mostrado a possibilidade de abrir páginas nos iframes atraves de links. As palavras chaves foram o atributo "name" colocado no iframe onde serão apresentados as páginas. No "Target" de cada link não é colocado _blank, mas sim o nome escolhido no atritbuto "name" que, nesse caso, foi colocado o nome de "iframe".   -->
+
+    <h1>Faça uma Escolha</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta veniam incidunt esse voluptate ratione iure ipsum dignissimos. Natus eligendi provident distinctio a vero corporis vitae nam culpa delectus accusamus? Officia!</p>
+
+    <ul>
+        <li><a href="../../Módulo 3/ex002/index.html" target="frame">Primeira Página</a></li>
+        <li><a href="../../Módulo 3/ex003/desafio_tabelas2.html" target="frame">Segunda Página</a></li>
+        <li><a href="../../Módulo 2/Projeto (Gabarito)/android.html" target="frame">Terceira Página</a></li>
+
+        
+
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure nobis aliquam nulla unde amet inventore ipsum facilis. Laboriosam nemo perferendis in doloribus alias earum a voluptatibus repellendus itaque quo.</p>
+
+    <iframe class="tela" name="frame" src="../../Módulo 2/ex001/index.html">
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+
+    </iframe>
+
+    <iframe class="tela" srcdoc="<h1>É possível usar H1 e paragrafo no iframe</h1><p>Basta usar o comando 'srdoc' no lugar do src.</p> ">
+        <p>Infelizmente seu navegador não é compativel com isso.</p>
+
+
+    </iframe>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil necessitatibus vero vitae distinctio quidem expedita voluptas ducimus iste reiciendis sunt! Aspernatur unde eos assumenda accusamus necessitatibus nisi exercitationem accusantium animi.</p>
+
+    
+</body>
+</html>
