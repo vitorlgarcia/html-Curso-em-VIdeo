@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query em um Único Documento</title>
+
+    <!-- Ao invés de fazer link CSS para cada dispositivo ou finalidade com Media Query, é possível que todo o processo seja feito uma folha de estilo CSS separada ou até mesmo em uma tag Style dentro do CSS, como no exemplo a seguir:-->
+
+    <style>
+
+    /* Declrações Gerais */
+
+    /* Pode-se usar o @medial all para configurar o media query geral, mas é visto no exemplo a seguir que não foi necessário */
+
+      * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #233eff;
+            background-size: contain;
+            background-repeat: no-repeat
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 3px 3px 0px #1526a7;
+            padding: 10px;
+        }
+    
+    /* Declarações Retrato */
+
+        @media screen and (orientation: portrait) {
+            /* tag @media usada para informar o media type screen e media feature portrair (retrato) */
+            body {
+            background-image: url(../imagens/cev-portrait.jpg);
+            background-position: center bottom;
+            }
+        }
+
+
+
+    /* Declarações Paisagem */
+        
+        @media screen and (orientation: landscape) {
+            body {
+            background-image: url(../imagens/cev-landscape.jpg);
+            background-position: left bottom;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Mude a orientação do seu dispositivo</h1>
+</body>
+</html>
