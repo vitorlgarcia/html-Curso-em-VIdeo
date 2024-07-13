@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #5f2c82;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    overflow: hidden; /* apagar todo elemento que estiver sobrepondo a div section de identidade Login. Se não for colocado esse comando, a imagem vai sobrepor o box radios que pertence a tag section */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.26);
+
+    transition: width .3s, height .3s; /* comando simples do CSS para que haja uma animação de abertura da div quando é mudada a largura da tela */
+
+    transition-timing-function: ease; /* Faz parte da animação CSS, no qual faz com que a abertura da DIV seja suavizada */
+    
+}
+
+div#imagem {
+    background: #5f2c82 url(../wallpaperflare.com_wallpaper.jpg) no-repeat;
+    background-size: cover;
+    background-position: center right;
+    height: 200px;
+    display: block;
+
+}
+
+#formulario {
+    padding: 10px;
+    display: block;
+}
+
+#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#formulario > p {
+    font-size: 0.8em;
+}
+
+form > div.campo {
+    background-color: #5f2c82;
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+    border: 2px solid #5f2c82
+}
+
+div.campo > label {
+    display: none;
+}
+
+form > input[type=submit] {   /* botão enviar do formulario */
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;   /* passou o mouse em cima, vira maozinha */
+}
+
+form > input[type=submit]:hover {
+    background-color: #316866;
+
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: #316866;
+    border: 1px solid #49a09d;
+    border-radius: 7px;
+
+}
+
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color:#72d4d1;
+    font-size: 1em;
+    height: 100%;
+    width: calc(100% - 44px);
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-14px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+}
+
+form > a.botao:hover {
+    background-color: #72d4d1;
+}
+
+form > a.botao > span {
+    font-size: 0.8em;
+}
