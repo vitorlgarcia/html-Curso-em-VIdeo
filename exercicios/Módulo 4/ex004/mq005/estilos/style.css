@@ -38,7 +38,7 @@ menu {
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: none; /* tira a numeração ou pontos que listam cada item da lista */
 }
 
 menu > ul > li > a {

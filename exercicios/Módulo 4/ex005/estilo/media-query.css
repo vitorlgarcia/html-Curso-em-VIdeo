@@ -12,7 +12,7 @@
     }
 
     div#imagem {
-        float: left; /*levou o elemento div imagem para a parte esquerda dentro da div man */
+        float: left; /*levou o elemento div imagem para a parte esquerda dentro da tag section */
         width: 30%;
         height: 100%;
     }

@@ -6,6 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* função que trava a imagem para não necessitar do scrool horizontal do mouse */
 ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
