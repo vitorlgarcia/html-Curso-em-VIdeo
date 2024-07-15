@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box 2</title>
+
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+        
+        }
+
+/* O comando Flex-wrap define a quebra de blocos ou se eles ficaram "achatados" quando a tela em uso é diminuida (responsividade). Por padrão o flex box é do tipo NOWRAP. Quando o flex é escolhido como wrap, a caixa será deslocada no sentido que o CROSS AXIS, ou seja, se o flex direction for ROW (horizontal), a caixa é quebrada para baixo (vertical), no sentido do eixo secundário. */
+
+/* é possível definir o wrap como WRAP-REVERSE. Desse forma a quebra da caixa será no sentido contrário do CROSS AXIS. Como exemplo, ao adicionar o flex-direction como ROW, ao diminuuir a tela, a caixa será quebrada para cima, pois é o sentido contrário do Cross axis (eixo secundário - vertical) */
+
+/* É possível juntar o flex direction com flex wrap usando flex-flow, ou seja:
+
+-- flex-flow = flex-direction + wrap --
+
+    APLICAÇÂO PRÀTICA:
+
+    flex-flow = row nowrap;
+*/
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex: auto
+
+/* O flex auto é usado somente nos conteiners filhos e faz com que não fique espaço sobrando no conteiner pai. Ou seja, todos os blocos do flex box irão se moldar de forma a cobrir toda a div conteiner, mesmo se forem quebrados. Ver o resultado com flex auto e sem o uso do flex auto!! */            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">Exemplo A</div>
+        <div class="item">Exemplo B</div>
+        <div class="item">Exemplo C</div>
+        <div class="item">Exemplo D</div>
+        <div class="item">Exemplo E</div>
+        <div class="item">Exemplo F</div>
+        <div class="item">Exemplo G</div>
+
+
+
+    </div>
+</body>
+</html>

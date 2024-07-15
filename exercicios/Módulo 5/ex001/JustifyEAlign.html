@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify-content e Align-items</title>
+
+    <style>
+        div.conteiner {
+            height: 500px;
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content:flex-start;
+            align-items: center;
+        }
+
+/*justify-content é um comando IMPORTANTE. Ele apresenta o modo como os items (divs filhas) serão dispostas no eixo principal.
+Por definição ele é iniciado como flex-start, no qual os conteineres filhos iniciam do incio e vão até o final do eixo principal. Outras formas de apresentar o justify-content: "flex-end", "center", "space-between", "space-evenly", "space-around". */
+
+/* Align-items também é muito IMPORTANTE. Ele apresenta o modo como istens (divs filhas) serão apresentadas no eixo SECUNDÁRIO. Por definição ele é iniciado como STRETCH e tem como opções: "flex-start", "flex-end" e "center"  */
+        
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2>Justify-content: Ilustrando os SPACES </h2>
+    <div><img src="spaces-justify-content.PNG" alt="justify-content" style="width: 500px; height: 400px"></div>
+    
+
+</body>
+</html>

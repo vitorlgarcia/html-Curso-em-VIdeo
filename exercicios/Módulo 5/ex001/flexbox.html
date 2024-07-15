@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: row;
+
+/* Por padrão, o flex box tem a direção ROW (flex-direction: row), ou seja, quando o display flex é adicionado, a configuração é que as caixas sejam dispostas na horizontal. Dessa forma o eixo principal é horizontal e a CROSS AXIS (eixo secundário) é na vertical.  */
+
+/* Ao ser adicionado o flex-direction: COLUMN, o eixo vertical se torna o principal e o Cross Axis (secundário) se torna o horizontal. */
+
+/* Por padrão, a disposição principal do ROW é da esquerda para direita e a disposição principal do Column é de cima para baixo. É possível inverter a disposição usando o flex-direction: row-reverse ou flex-direction: column-reverse. Assim, a direção horizontal é da direita para esquerda se usar row-reverse. E a direção é de baixo para cima se usar o column-reverse */
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+
+
+
+    </div>
+</body>
+</html>
