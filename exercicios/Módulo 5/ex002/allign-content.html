@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box 2</title>
+
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex-flow: row wrap;   lembrando que o flex-flow é a junção do flex-direction com o flex-wrap */
+            align-content: space-around;
+
+
+        
+/* Aqui será estudado o align-content. NÃO CONFUNDIR com o justify-content e nem com o align-items! LEMRANDO que:
+
+O justify-content ajusta as divs filhas (div item, nesse exemplo) no eixo principal. Nesse caso o eixo principal é o row (linha). Então as divs filhas podem ser ajustadas pra ficarem na direita, esquerda ou centro da tela. Ainda existem outros modos de ajustar as divs filhas horizontalmente como "space-between", "space-evenly", "space-around" (ver na foto anexa a essa pasta)
+
+O align-items ajusta as mesmas divs, porém no eixo secundário (transversal). Nesse exemplo o eixo secundário é na vertical, sendo as divs ajustadas no inicio (parte de cima), no centro, ou no final da tela (parte de baixo)
+
+O novo comando align-content alinha os itens no eixo transversal também, mas quando eles estão empacotados (explicação do Guanabara). Na prática é necessário que o wrap esteja ativado para que as divs possam se deslocar quando a tela é diminuída. A div pai deve ter um tamanho grande (nesse exemplo a altura "height" vai ser 500px) para que as divs filhas possam se deslocar sobre ela do modo que o align-content estiver ajustado (OLHAR OS EXEMPLOS NO DOCUMENTO PDF EM ANEXO A ESSE EXEMPLO.)
+
+MUUUITO IMPORTANTE!!! Todos esses comandos são destinados aos conteiners (divs pais). Pois assim eles farão efeitos sobre as divs filhas
+
+
+
+*/
+
+
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex: auto /* Ao colocar flex auto na div filha, os quadradinhos irão se ajustar para cobrir toda o eixo horizontal (principal) da tela */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="item">Exemplo A</div>
+        <div class="item">Exemplo B</div>
+        <div class="item">Exemplo C</div>
+        <div class="item">Exemplo D</div>
+        <div class="item">Exemplo E</div>
+        <div class="item">Exemplo F</div>
+        <div class="item">Exemplo G</div>
+        <div class="item">Exemplo h</div>
+        <div class="item">Exemplo I</div>
+        <div class="item">Exemplo J</div>
+        <div class="item">Exemplo L</div>
+
+
+
+    </div>
+</body>
+</html>
