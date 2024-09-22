@@ -12,7 +12,7 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content:flex-start;
+            justify-content:space-around;
             align-items: center;
         }
 
@@ -20,12 +20,15 @@
 Por definição ele é iniciado como flex-start, no qual os conteineres filhos iniciam do incio e vão até o final do eixo principal. Outras formas de apresentar o justify-content: "flex-end", "center", "space-between", "space-evenly", "space-around". */
 
 /* Align-items também é muito IMPORTANTE. Ele apresenta o modo como istens (divs filhas) serão apresentadas no eixo SECUNDÁRIO. Por definição ele é iniciado como STRETCH e tem como opções: "flex-start", "flex-end" e "center"  */
+
+/* IMPORTANTE!!! 
+
+Os comandos Align-items e justify-content são usados apenas nas divs pais (conteiners). Desse modo as divs filhas são apresentadas dentro das divs pais conforme os comandos indicarem */
         
 
         div.item {
             background-color: lightblue;
             border: 1px solid black;
-            text-align: center;
             padding: 10px;
         }
 
