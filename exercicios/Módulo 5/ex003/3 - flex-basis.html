@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-basis</title>
+
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap;  /* lembrando que o flex-flow é a junção do flex-direction com o flex-wrap */
+
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: 150px; /* por padrão, flex-basis é "auto" */
+
+            /* o flex basis é mais um elemento atribuído às divs FILHAS (divs items). Ele, praticamente, dá um comprimento definido para cada quadradinho. Por padrão o flex-basis é AUTO. Nesse padrão o comprimento de cada div filha (quadradinho) é ajustado de acordo com o conteúdo que está dentro do quadradinho.
+            
+
+            Existem duas formas para se trabalhar com flex-basis: 
+            
+            1 - com NOWRAP: Se, por exemplo, o flex-basis das divs items for delimitado em 150px, cada div terá esse comprimento até a tela ser diminuída. A partir daí o NOWRAP entra em ação e irá comprimir as divs para se manter na tela sem quebra de linha.(Testar no exercicio colocando o flex-flow como row NOWRAP).
+
+            2 - com WRAP: Se, por exemplo, o flex-basis das divs items for delimitado em 150px, cada div terá SEMPRE esse comprimento. Se a tela for diminuída, o WRAP entra em ação e quebra as divs igual nos exercicios anteriores. O comprimento das divs irá se manter em 150px e vão se quebrando enquanto a tela for diminuindo e elas não caberem dentro da div conteiner. (Testar colocando o flex-flow como row WRAP).
+
+            */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">Outro conteúdo</div>
+        <div class="item">C</div>
+        <div class="item">Conteudo um pouco maior</div>
+        <div class="item">E</div>
+        <div class="item">Conteudo maior ainda, que vai ocupar mais espaço</div>
+        <div class="item">G</div>
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-shrink e flex-grow</title>
+
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap;  /* lembrando que o flex-flow é a junção do flex-direction com o flex-wrap */
+
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: 150px; /* por padrão, flex-basis é "auto" */
+            flex-grow: 1; /* aumento proporcional das divs filhas */
+            flex-shrink: 1; /* diminuição proporcional das divs filhas */
+        }
+
+            /* Flex-grow e flex-shrink também são específicos para divs filhas (divs da classe item) e trabalham em CONJUNTO com o flex-basis. Trata-se de comandos que permitem que cada div filha cresça ou diminua, em proporções PRÉ-DEFINIDAS, no caso da div pai (conteiner) diminuir ou aumentar.  
+            
+            Os dois comandos (flex-grow e flex-shrink) terão diferentes comportamentos também de acordo com o flex-wrap (WRAP e NOWRAP). (TESTAR em cada um dos modos).
+
+            Por padrão, o flex-grow é 0 e o flex-shrink é 1. Se o comando flex-grow for 0, a div em questão não terá aumento. E se o comando flex-shrink for 0, a div em questão não terá diminuição.
+            
+
+
+            ALGUMAS OBSERVAÇÕES TESTANDO FLEX-GROW E FLEX-SHRINK COM WRAP E NOWRAP (com flex-basis em 150px):
+
+            NOWRAP: Se flex-grow for 0 e flex-shrink for 1: ao deixar a tela cheia, cada div fica no tamanho padrão de 150px cada uma, pois não está sendo permitido o aumento. Ao diminuir a tela, as divs irão diminuir em igual proporção e NÂO terá DIV quebrada por ser NOWRAP!
+
+            Ao colocar flex-grow = 1 e flex-shrink = 1, as divs irão aumentar proporcionalmente entre si até cobrirem todo o tamanho do conteiner (div pai) a medida que a tela aumenta. E também irão diminuir proporcionalmente junto ao tamanho do conteiner a medida que a tela diminui. Nesse caso em específico o flex-basis fica obsoleto (não funciona). 
+
+            No caso de flex-grow = 1 e flex-shrink = 0, as divs irão aumentar proporcionalmente entre si e cobrirem todo o tamanho do conteiner (div pai). A medida que a tela diminui, as divs filhas irão diminuir até travar nos 150px delimitados pelo flex-basis. Ao diminuir a tela mais ainda, será necessário usar o scroll horizontal do navegador para ver as divs, pois elas ficarão travadas no 150px.
+
+
+            WRAP: Se flex-grow = 0 e flex-shrink = 1, as divs filhas terão 150px de comprimento. A medida que tela for diminuida, as divs filhas serão quebradas e continuarão do mesmo tamanho (150px). Isso por que o WRAP exige essa quebra.
+            
+            A grande diferença ser dará quando flex-grow = 1, pois tanto as divs estão na primeira linha quanto as que descem (quebradas), conforme a tela for diminuindo, vão crescer proporcionalmente entre si, cobrindo a primeira linha e a nova linha do conteiner que se formou após a diminuição da tela. (testar para verificar isso visualmente).
+
+            flex-grow e flex-shrink não são limitadas somente em 0 e 1. No próximo exemplo será visto que os valores atribuídos a cada div filha tem a ver com a proporcionalidade de crescimento ou diminuição em relação as demais divs.
+
+            */
+        
+        div.conteiner2 {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;  /* lembrando que o flex-flow é a junção do flex-direction com o flex-wrap */
+
+        }
+
+        div.item2 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* BRINCAR COM OS FLEX-GROW E FLEX-SHRINK DE CADA CAIXA!! 
+        
+        Assim será possível entender a proporcional de crescimento e diminuição de cada caixa em relação as outras. Ex: Quando coloco flex-grow = 4 em uma caixa e a outra coloco 1. A proporção será de 4:1:1. Agora se eu colocar um valor maior que 1 em uma caixa e nas demais colocar 0, não existira proporção. Tentar entender isso enquanto estiver fazendo os experimentos. Também alterar os valores do flex-basis individualmente pra ver a proporção dos tamanhos e também como o flex-basis trava o aumento ou diminuição das caixas quando algum dos comandos grow ou shrink forem = 0.
+
+        Lembrando que cada caixa vão aumentar e diminuir proporcionalmente ao que for colocado no comando e sempre vão obedecer o flex-basis. EX: Se o flex-basis de todos for 300px, o flex-grow = 0 e o flow-shrink de cada um for diferente, eles vão diminuir na mesma proporção até chegar nos 300px cada um. Aí depois cada um vai diminuir na proporção pré-definida.
+
+        Agora se flex-grow e flex-shrink terem valor diferentes pré-definidos, o crescimento e diminuição será sempre proporcional a esses valores e o flex-basis não terá muito sentido.
+        
+        */
+
+        div#caixaA {
+            flex-basis: 300px;
+            flex-grow: 0;
+            flex-shrink: 4;
+        }
+
+        div#caixaB {
+            flex-basis: 300px;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        div#caixaC {
+            flex-basis: 300px;
+            flex-grow: 0;
+            flex-shrink: 8;
+        }
+
+            
+    </style>
+</head>
+
+<body>
+    <h2>Flex-shrink e flex-grow (aplicação na classe item como um todo)</h1>
+
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+
+    <h2>Flex-grow e flex-shrink (aplicação individual nas ID para ver o crescimento e diminuição proporcional)</h2>
+
+    <div class="conteiner2">
+        <div class="item2" id="caixaA">A</div>
+        <div class="item2" id="caixaB">B</div>
+        <div class="item2" id="caixaC">C</div>
+    </div>
+
+
+</body>
+</html>
