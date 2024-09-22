@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap;   /* lembrando que o flex-flow é a junção do flex-direction com o flex-wrap */
+
+
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<!-- O Comando ORDER é focado nas divs filhas (itens) e tem como objetivo organizar cada item (quadradinho) em ordem numérica crescente dentro da div pai. Tal comando aceita números negativos e quanto mais negativo for, mais perto da primeira posição ele fica. No exemplo abaixo a DIV de letra E é o primeiro a aparecer, pois é o maior número negativo. Números que sucedem vão fazendo com que os quadrados apareçam na sequência. -->
+
+<!--IMPORTANTE!!! 
+
+Por padrão, todas as divs items tem ORDER igual a 0.
+
+
+-->
+
+<body>
+    <div class="conteiner">
+        <div class="item" style="order: 5">A</div>
+        <div class="item" style="order: 2">B</div>
+        <div class="item" style="order: 6;">C</div>
+        <div class="item" style="order: -1">D</div>
+        <div class="item" style="order: -3;">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+
+    </div>
+</body>
+</html>
