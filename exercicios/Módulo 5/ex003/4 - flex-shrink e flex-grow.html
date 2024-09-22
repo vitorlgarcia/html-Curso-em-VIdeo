@@ -63,31 +63,60 @@
         }
 
         /* BRINCAR COM OS FLEX-GROW E FLEX-SHRINK DE CADA CAIXA!! 
+
+        Colocar o container2 como NOWRAP para ver a variação de aumento e diminuição das caixas sem quebras!!!
         
         Assim será possível entender a proporcional de crescimento e diminuição de cada caixa em relação as outras. Ex: Quando coloco flex-grow = 4 em uma caixa e a outra coloco 1. A proporção será de 4:1:1. Agora se eu colocar um valor maior que 1 em uma caixa e nas demais colocar 0, não existira proporção. Tentar entender isso enquanto estiver fazendo os experimentos. Também alterar os valores do flex-basis individualmente pra ver a proporção dos tamanhos e também como o flex-basis trava o aumento ou diminuição das caixas quando algum dos comandos grow ou shrink forem = 0.
 
         Lembrando que cada caixa vão aumentar e diminuir proporcionalmente ao que for colocado no comando e sempre vão obedecer o flex-basis. EX: Se o flex-basis de todos for 300px, o flex-grow = 0 e o flow-shrink de cada um for diferente, eles vão diminuir na mesma proporção até chegar nos 300px cada um. Aí depois cada um vai diminuir na proporção pré-definida.
 
         Agora se flex-grow e flex-shrink terem valor diferentes pré-definidos, o crescimento e diminuição será sempre proporcional a esses valores e o flex-basis não terá muito sentido.
+
+
+        SIMPLIFICAÇÔES:
+
+        Existe um comando que resume o flex-grow, flex-shrink e o flex-basis em um só. Trata-se do comando "FLEX". Abaixo o comando flex é colocado como comentários para mostrar como ficaria em cada caixa.
+
+        flex: 0 1 150px; 
         
+        é o mesmo que --> flex-grow: 0;  flex-shrink: 1;  flex-basis: 150px;
+
+        LEMBRANDO: flex-grow = 0 por padrão; flex-shrink = 1 por padrão; flex-basis = auto por padrão.
+
+        Então... flex: 0 1 auto; é o padrão!!
+
+        flex: initial;  também é outro modo de colocar o flex como padrão
+
+
+        LEMBRA quando nos exercícios anteriores era colocado flex: auto; ?  A verdade é que colocando o flex como auto, o valor do flex é --> flex: 1 1 auto;    é por isso que nos exercícios as caixinhas se moldavam ao tamanho do conteiner (div pai). Pois flex-shrink e flex-grow ficam ativados e flex-basis é "auto", ou seja, o comprimento das divs filhas são de acordo com o tamanho do conteúdo dentro delas. Isso é o MÀXIMO de flexibilidade que uma div filha pode ter.
+        
+        flex: 3;   é a mesma coisa de fazer flex-grow = 3 e manter os demais comandos no padrão, ou seja, é o mesmo que flex: 3 1 auto.
+
+        flex: 3 2;  é o mesmo que flex-grow = 3, flex-shrink = 2 e flex-basis = auto. (só alterou dois comandos e o terceiro permaneceu padrão)
+
+        flex: none;  é o mesmo que -->  flex: 0 0 auto;
+
         */
 
         div#caixaA {
             flex-basis: 300px;
             flex-grow: 0;
             flex-shrink: 4;
+            /* flex: 0 4 300px;   */
         }
 
         div#caixaB {
             flex-basis: 300px;
             flex-grow: 0;
             flex-shrink: 1;
+            /* flex: 0 1 300px;   */
         }
 
         div#caixaC {
             flex-basis: 300px;
             flex-grow: 0;
             flex-shrink: 8;
+            /* flex: 0 8 300px;   */
         }
 
             
