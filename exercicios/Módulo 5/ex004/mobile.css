@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+ header {
+    flex-flow: column nowrap /* deixou o cabeçalho (titulo e navegador) como coluna e sem quebras */
+ }
+
+ header > h1 {
+    flex-basis: 50px; /* o tamanho do titulo é de 50px */
+ }
+
+ header > nav {
+    flex-flow: column nowrap; /* os itens do conteiner nav foram colocados como colunas e sem quebras de linha */
+    width: 90vw;
+ }
