@@ -9,7 +9,7 @@
         div.conteiner {
             background-color: lightsalmon;
             display: flex;
-            flex-flow: row wrap;  /* lembrando que o flex-flow é a junção do flex-direction com o flex-wrap */
+            flex-flow: row nowrap;  /* lembrando que o flex-flow é a junção do flex-direction com o flex-wrap */
 
         }
 
@@ -20,7 +20,7 @@
             padding: 10px;
             flex-basis: 150px; /* por padrão, flex-basis é "auto" */
             flex-grow: 1; /* aumento proporcional das divs filhas */
-            flex-shrink: 1; /* diminuição proporcional das divs filhas */
+            flex-shrink: 0; /* diminuição proporcional das divs filhas */
         }
 
             /* Flex-grow e flex-shrink também são específicos para divs filhas (divs da classe item) e trabalham em CONJUNTO com o flex-basis. Trata-se de comandos que permitem que cada div filha cresça ou diminua, em proporções PRÉ-DEFINIDAS, no caso da div pai (conteiner) diminuir ou aumentar.  
