@@ -25,13 +25,13 @@ header {
 }
 
 header > h1 {
-    /*border: 1px dotted black; */ /* legal usar bordas nesse exercicio para ver como cada div está se comportando com o display flex */
+    border: 1px dotted black; /* legal usar bordas nesse exercicio para ver como cada div está se comportando com o display flex */
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.26);
     flex: 0 0 200px /* o titulo não mudará de tamanho com o aumento e diminuição da tela */
 }
 
 nav {
-    /*border: 1px dotted black;*/
+    border: 1px dotted black;
     display: flex; /* aqui é visto o conceito de conteiner dentro de conteiner */
     flex-flow: row wrap; /* as divs de link "a" ficaram dispostas em linhas e com quebra */
     justify-content: flex-end; /* divs colocadas no canto direito da tela */
