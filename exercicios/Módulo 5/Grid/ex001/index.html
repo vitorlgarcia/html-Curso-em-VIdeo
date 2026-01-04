@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout na Prática</title>
+
+    <style>
+        div.container {
+            border: 2px solid blue;
+            height: 250px; /* Ao ser usado uma altura fixa, o Grid tentará distribuir os elementos igualmente nesse espaço. Se não houvesse display Grid, as Divs Items teriam um tamanho fixo e sobraria espaço no container. Tirar o display Grid para entender o que eu estou falando. */
+            display: grid; /* A função do Grid é organizar os elementos em linhas e colunas */
+            grid-template-columns: auto auto auto; /* Define 3 colunas com largura automática que preencherá o container.
+            Também é possível usar uma opção específica. (EX: "200px 200px 200px"), no qual existiria 3 colunas com larguras pré-definidas */
+            grid-template-rows: auto auto auto; /* Define 3 linhas com altura automática (também é possível usar a opção 1fr 1fr 1fr, no qual existiria 3 linhas com as mesmas dimensões que preencheriam o container) */
+            gap: 5px; /* Define um espaçamento de 5px entre as linhas e colunas do Grid */
+            align-items: normal; /* Alinha os ITENS (divs filhas) na direção VERTICAL (padrão é stretch ou normal, que faz com que os itens preencham toda a altura da célula do Grid) */
+            justify-items: normal; /* Alinha os ITENS (divs filhas) na direção HORIZONTAL (padrão é stretch ou normal, que faz com que os itens preencham toda a largura da célula do Grid) */
+            align-content: normal; /* Alinha o conteúdo do Grid (CONTAINER) na direção VERTICAL (padrão é start, que faz com que o conteúdo fique na parte superior inicial do container) */
+            justify-content: normal; /* Alinha o conteúdo do Grid (CONTAINER) na direção HORIZONTAL (padrão é stretch ou normal, que faz com que o conteúdo preencha toda a largura do container) */
+
+            /* Para os quadro comandos acima, seguem algumas opções possíveis de valores: stretch, center, end, start */
+
+            /* O Stretch faz com que os elementos preencham todo o espaço disponível (ESTICANDO a DIV para preencher todo o espaço disponível) */
+            /* Center alinha os elementos ao centro */
+            /* End alinha os elementos ao final */
+            /* Start alinha os elementos ao início */
+            /* space-between, space-around e space-evenly são valores possíveis apenas para o justify-content e align-content */
+            /* space-between distribui os elementos com o máximo de espaço possível entre eles */
+            /* space-around distribui os elementos com espaços iguais ao redor deles */
+            /* space-evenly distribui os elementos com espaços iguais entre eles e nas extremidades */
+
+            /* Para entender melhor as propriedades de alinhamento, veja o arquivo PDF e altere os valores para analisar cada mudança na prática */
+            /* Colocar, inicialmente, o valor stretch em todas as propriedades de alinhamento e depois ir alterando uma por uma para entender o funcionamento de cada propriedade */
+            /* Utilize o DevTools (GRID) do navegador Google Chrome para inspecionar o container e os itens */
+
+            /* Algo que eu reparei é que os alinhamentos horizontal e vertical dos ITENS fazem com que o tamaanho dos itens se ajustem com o tamanho do conteúdo (texto) dentro deles. */
+        }
+
+        div.item {
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+
+    </div>
+</body>
+</html>
