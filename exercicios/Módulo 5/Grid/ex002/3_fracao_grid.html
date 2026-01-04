@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout na Prática</title>
+
+    <style>
+        div.container {
+            border: 3px solid blue;
+            height: 250px;
+            display: grid;
+            grid-template-rows: 1fr 3fr 1fr; /* Define as linhas do grid usando frações do espaço disponível. A primeira linha ocupará 1 parte, a segunda linha ocupará 3 partes e a terceira linha ocupará 1 parte do espaço(em altura) disponível */
+
+            grid-template-columns: 40px 20% 1fr; /* Define as colunas do grid usando diferentes unidades de medida. A primeira coluna terá 20px de largura, a segunda coluna terá 20% da largura do container e a terceira coluna ocupará o espaço restante disponível em frações */
+
+            /* alterar as frações ou os valores em pixel e porcentagem para ver o comportamento do grid */
+
+            grid-auto-flow: column;
+            grid-auto-rows: 50px;
+            grid-auto-columns: 150px;
+            gap: 10px;
+        }
+
+        div.item {
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+
+    </div>
+</body>
+</html>

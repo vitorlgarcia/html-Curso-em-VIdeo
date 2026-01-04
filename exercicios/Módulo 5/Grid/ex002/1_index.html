@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout na Prática</title>
+
+    <style>
+        div.container {
+            border: 2px solid blue;
+            height: 250px;
+            display: grid;
+            grid-template: repeat(3, auto) / repeat(3, auto); /* grid-template-rows e grid-template-columns juntos são simplificados pelo grid-template. Ao invés de escrever auto 3x, é possível usaro comando repeat e colocar a quantidade de vezes que se deseja repetir um atributo Ex: repeat(4, 150px) */
+            gap: 10px;
+            place-items: start center; /* Comando que simplifica e junta o align-items e justify-items. Alinha os itens no centro do eixo horizontal e no início do eixo vertical. seria o mesmo que escrever align-items: start; justify-items: center; */
+            
+            place-content: space-between end; /* Comando que simplifica e junta o align-content e justify-content. Alinha o conteúdo no final do eixo horizontal e distribui o conteúdo com espaço entre os itens no eixo vertical. Seria o mesmo que escrever align-content: space-between; justify-content: end; */
+        }
+
+        div.item {
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+
+    </div>
+</body>
+</html>
