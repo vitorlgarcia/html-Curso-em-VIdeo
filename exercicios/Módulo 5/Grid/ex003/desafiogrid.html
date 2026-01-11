@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100vw; /* largura total da viewport */
+            height: 100vh; /* altura total da viewport */
+            display: grid;
+            grid-template-rows: 80px 40px 1fr 40px; /* 4 linhas: 80px, 40px, flexível com 1 fração do espaço disponível(#principal), 40px */
+            grid-template-columns: 1fr 150px; /* 2 colunas: a primeira flexível de 1 fração do espaço disponível (#topo, #menu, #principal e #rodape), a segunda fixa com 150px */
+            gap: 5px;
+
+            /* ao diminuir o tamanho da janela, o layout se ajusta automaticamente, porém terá um momento que a primeira coluna ficará menor do que a segunda, justamente por ser flexível. Será necessário usar media queries, por exemplo, para ajustar ao tamananho do celular */
+        }
+
+        .caixa {
+            border: 1px solid black;
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        #topo {
+            grid-area: 1 / 1 / 2 / -1; /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+        }
+
+        #menu {
+            grid-area: 2 / 1 / 3 / -1;
+        }
+
+        #principal {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+
+        #secundario {
+            grid-area: 3 / 2 / 4 / -1;
+        }
+        #rodape {
+            grid-area: 4 / 1 / 5 / -1;
+        }
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <header class="caixa" id="topo">
+            Topo
+        </header>
+        <nav class="caixa" id="menu">
+            Menu
+        </nav>
+        <main class="caixa" id="principal">
+            Principal
+        </main>
+        <aside class="caixa" id="secundario">
+            Lateral
+        </aside>
+        <footer class="caixa" id="rodape">
+            Rodapé
+        </footer>
+    </div>
+</body>
+</html>
