@@ -23,12 +23,21 @@
     --fundo-card: #ffffff;
 }
 
+body.escuro { /* Declaração das variáveis de cores para o modo escuro */
+    --fundo-principal: #121212; 
+    --texto: #e0e0e0;
+    --texto-inverso: #121212;
+    --destaque: #1e90ff;
+    --destaque-inverso: #559dff;
+    --fundo-card: #1e1e1e;
+}
+
 body { /* Estilos gerais do corpo da página */
     background-color: var(--fundo-principal);
     color: var(--texto);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5em;
-    
+    transition: background-color 0.5s, color 0.5s; /* Transição suave para modo escuro */
 }
 
 header { /* Estilos do cabeçalho. Repare no modo como display flex fez com que os icones ficassem no canto direito e verticalmente no centro */
@@ -38,6 +47,9 @@ header { /* Estilos do cabeçalho. Repare no modo como display flex fez com que 
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav#menu ul { /* Estilos do menu de navegação */
@@ -266,6 +278,21 @@ footer a:hover {
 }
 
 @media screen and (min-width: 768px) {
+    main {
+        grid-template-columns: auto 300px 1fr auto;
+    }
+
+    section#ficha {
+        grid-column: 2/3; /* Mantém a seção ficha na segunda coluna do grid */
+        height: fit-content; /* Ajusta a altura da seção ficha ao conteúdo */
+        position: sticky; /* Torna a seção ficha fixa ao rolar a página */
+        top: 65px; /* Espaçamento do topo para evitar sobreposição com o cabeçalho */
+    }
+
+    section#detalhes {
+        grid-column: 3/4; /* Move a seção detalhes para a terceira coluna do grid */
+    }
+
     #skill-container {
         grid-template-columns: 1fr 1fr; /* Duas colunas em telas menores */
     }
